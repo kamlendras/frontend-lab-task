@@ -1,0 +1,75 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; 
+    color: rgb(40, 40, 40); 
+    margin: 0;
+    padding: 20px;
+    max-width: 800px;
+}
+
+h2 {
+    color: rgb(0, 102, 204);
+}
+
+
+#main-header {
+    background-color: rgb(0, 102, 204); 
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+.intro-section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    border-left: 5px solid rgb(0, 102, 204);
+}
+
+.intro-section p {
+    color: #555555; 
+    line-height: 1.6;
+}
+
+
+a:link, a:visited {
+    color: rgb(0, 102, 204);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(255, 69, 0); 
+    text-decoration: underline;
+}
+
+
+#movies-list {
+    list-style-type: upper-roman; 
+    background-color: #eef2f5;
+    padding: 20px 40px;
+    border-radius: 4px;
+}
+
+#movies-list li:hover {
+    color: rgb(200, 50, 50); 
+    cursor: pointer;
+}
+
+.cities-list {
+    list-style-type: square; 
+    background-color: rgb(249, 249, 234);
+    padding: 20px 40px;
+    border-radius: 4px;
+}
+
+.cities-list li {
+    margin-bottom: 8px;
+}
+
+.cities-list li:hover {
+    font-weight: bold; 
+    color: rgb(0, 150, 100);
+}
