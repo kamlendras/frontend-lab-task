@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Timetable</title>
+    <link rel="stylesheet" href="Timetable.css">
+</head>
+<body>
+
+    <main>
+        <h1>Weekly Academic Timetable</h1>
+        
+        <table>
+            <caption>Computer Science - Semester 3</caption>
+            <thead>
+                <tr>
+                    <th>Day / Time</th>
+                    <th>09:00 - 10:30</th>
+                    <th>10:30 - 12:00</th>
+                    <th>12:00 - 13:00</th>
+                    <th>13:00 - 14:30</th>
+                    <th>14:30 - 16:00</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Monday</th>
+                    <td>Data Structures</td>
+                    <td>Linear Algebra</td>
+                    <td rowspan="5" class="lunch-break">Lunch<br>Break</td>
+                    <td colspan="2" class="merged-slot lab-slot">Advanced Programming Lab</td>
+                </tr>
+                <tr>
+                    <th>Tuesday</th>
+                    <td colspan="2" class="merged-slot workshop-slot">Web Tech Workshop</td>
+                    <td rowspan="2" colspan="2" class="merged-slot project-slot">Mini Project Hackathon</td>
+                </tr>
+                <tr>
+                    <th>Wednesday</th>
+                    <td>Linear Algebra</td>
+                    <td>Computer Networks</td>
+                </tr>
+                <tr>
+                    <th>Thursday</th>
+                    <td>Database Systems</td>
+                    <td>Seminar</td>
+                    <td>Operating Systems</td>
+                    <td>Free Period</td>
+                </tr>
+                <tr>
+                    <th>Friday</th>
+                    <td colspan="2" class="merged-slot lecture-slot">Systems Design Guest Lecture</td>
+                    <td>Database Systems</td>
+                    <td>Library / Self-Study</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+</body>
+</html>

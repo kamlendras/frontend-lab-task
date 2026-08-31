@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 2rem;
+    color: #333;
+    background-color: #fafafa;
+}
+
+main {
+    max-width: 950px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #eaecef;
+}
+
+h1 {
+    text-align: center;
+    color: #24292e;
+    margin-top: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+caption {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #57606a;
+}
+
+th, td {
+    border: 1px solid #d0d7de;
+    padding: 1rem;
+    text-align: center;
+}
+
+thead th, tbody th {
+    background-color: #f6f8fa;
+    color: #24292e;
+    font-weight: 600;
+}
+
+.lunch-break {
+    background-color: #f3f4f6;
+    color: #57606a;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.merged-slot {
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.lab-slot {
+    background-color: #ddf4ff;
+    color: #0969da;
+}
+
+.workshop-slot {
+    background-color: #fff8c5;
+    color: #9a6700;
+}
+
+.project-slot {
+    background-color: #dafbe1;
+    color: #1a7f37;
+}
+
+.lecture-slot {
+    background-color: #fbefff;
+    color: #8250df;
+}
+
+tbody td:hover {
+    outline: 2px solid #0969da;
+}
