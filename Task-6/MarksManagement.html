@@ -1,0 +1,75 @@
+        
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks Management</title>
+</head>
+<body>
+
+    <h2>Student Marks Report</h2>
+
+    <script>
+        const students = [
+            { name: "Rahul", marks: 85 },
+            { name: "Priya", marks: 32 },
+            { name: "Amit", marks: 67 },
+            { name: "Sneha", marks: 90 },
+            { name: "Kiran", marks: 28 }
+        ];
+
+        function processStudents(students) {
+
+            const updatedStudents = students.map(student => {
+                return {
+                    name: student.name,
+                    marks: Math.min(student.marks + 5, 100)
+                };
+            });
+
+            const passedStudents = updatedStudents.filter(
+                student => student.marks >= 40
+            );
+
+            const totalMarks = passedStudents.reduce(
+                (total, student) => total + student.marks,
+                0
+            );
+
+            const averageMarks = passedStudents.length > 0
+                ? totalMarks / passedStudents.length
+                : 0;
+
+            console.log("Passing Students:");
+
+            passedStudents.forEach(student => {
+                console.log(
+                    student.name + " - " + student.marks
+                );
+            });
+
+            return {
+                passedStudents,
+                averageMarks
+            };
+        }
+
+        (function () {
+            const report = processStudents(students);
+
+            console.log("Final Report");
+            console.log(
+                "Average Marks:",
+                report.averageMarks.toFixed(2)
+            );
+            console.log(
+                "Total Passing Students:",
+                report.passedStudents.length
+            );
+        })();
+
+    </script>
+
+</body>
+</html>

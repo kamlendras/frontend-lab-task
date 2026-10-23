@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions and Array Methods</title>
+</head>
+<body>
+
+    <script>
+        function calculateTotal(price, quantity) {
+            return price * quantity;
+        }
+
+        console.log("Function:");
+        console.log("Total Price:", calculateTotal(100, 3));
+
+
+        function counter() {
+            let count = 0;
+
+            return function () {
+                count++;
+                return count;
+            };
+        }
+
+        const increment = counter();
+
+        console.log("Closure:");
+        console.log(increment());
+
+
+        (function () {
+            let message = "This is an IIFE";
+            console.log(`IIFE: ${message} `);
+        })();
+
+
+        const numbers = [10, 20, 30, 40, 50];
+        
+        const doubled = numbers.map(num => num * 2);
+
+        console.log("map():", doubled);
+
+
+        const filtered = numbers.filter(num => num > 20);
+
+        console.log("filter():", filtered);
+
+
+        const sum = numbers.reduce((total, num) => total + num, 0);
+
+        console.log("reduce():", sum);
+
+
+        console.log("forEach():");
+
+        numbers.forEach(num => {
+            console.log(num);
+        });
+
+    
+    </script>
+
+</body>
+</html>
