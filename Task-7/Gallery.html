@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Gallery</title>
+</head>
+<body>
+  <h1>Image Gallery</h1>
+  <img id="mainImage" src="https://picsum.photos/id/10/600/400" alt="Forest" width="600">
+  <br>
+  <img class="thumb" src="https://picsum.photos/id/10/150/100" data-full="https://picsum.photos/id/10/600/400" alt="Forest" width="100">
+  <img class="thumb" src="https://picsum.photos/id/20/150/100" data-full="https://picsum.photos/id/20/600/400" alt="Desk" width="100">
+  <img class="thumb" src="https://picsum.photos/id/30/150/100" data-full="https://picsum.photos/id/30/600/400" alt="Mug" width="100">
+  <img class="thumb" src="https://picsum.photos/id/40/150/100" data-full="https://picsum.photos/id/40/600/400" alt="Cat" width="100">
+
+  <script>
+    const mainImage = document.getElementById("mainImage");
+    const thumbs = document.querySelectorAll(".thumb");
+
+    thumbs.forEach(function (thumb) {
+      thumb.addEventListener("click", function () {
+        mainImage.src = thumb.dataset.full;
+        mainImage.alt = thumb.alt;
+      });
+    });
+  </script>
+</body>
+</html>
