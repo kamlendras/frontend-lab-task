@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Chessboard</title>
+    <style>
+      #board { display: grid; grid-template-columns: repeat(8, 60px); width: 480px; }
+      #board div { height: 60px; }
+      .black { background: red; }
+    </style>
+  </head>
+  <body>
+    <h2>Chessboard</h2>
+    <div id="board"></div>
+
+    <script>
+      const board = document.getElementById("board");
+      for (let i = 0; i < 64; i++) {
+        const cell = document.createElement("div");
+        if ((i + Math.floor(i / 8)) % 2) cell.className = "black";
+        board.append(cell);
+      }
+    </script>
+  </body>
+</html>

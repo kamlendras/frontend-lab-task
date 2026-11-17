@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List</title>
+</head>
+<body>
+    <h2>To-Do List</h2>
+
+    <input id="taskInput" placeholder="Enter your task">
+    <button onclick="addTask()">Add Task</button>
+
+    <ul id="taskList"></ul>
+
+    <script>
+        function addTask() {
+            const input = document.getElementById("taskInput");
+            const task = input.value.trim();
+            if (!task) return;
+
+            const li = document.createElement("li");
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            const text = document.createElement("span");
+            text.textContent = task;
+
+            checkbox.onchange = () => {
+                if (checkbox.checked) {
+                    const s = document.createElement("s");
+                    s.textContent = task;
+                    text.replaceChildren(s);
+                } else {
+                    text.textContent = task;
+                }
+            };
+
+            const up = document.createElement("button");
+            up.textContent = "↑";
+            up.onclick = () => {
+                if (li.previousElementSibling) li.parentNode.insertBefore(li, li.previousElementSibling);
+            };
+
+            const down = document.createElement("button");
+            down.textContent = "↓";
+            down.onclick = () => {
+                if (li.nextElementSibling) li.parentNode.insertBefore(li.nextElementSibling, li);
+            };
+
+            const del = document.createElement("button");
+            del.textContent = "Delete";
+            del.onclick = () => li.remove();
+
+            li.append(checkbox, text, up, down, del);
+            document.getElementById("taskList").appendChild(li);
+            input.value = "";
+        }
+    </script>
+</body>
+</html>
