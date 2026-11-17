@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Server Data Fetching</title>
+</head>
+<body>
+    <h2>Server Data Fetching</h2>
+    <button onclick="fetchData()">Fetch Data</button>
+    <div id="result">Click the button to fetch data.</div>
+
+    <script>
+        function fetchData() {
+            const result = document.getElementById("result");
+            result.textContent = "Loading data...";
+
+            new Promise(resolve => {
+                setTimeout(() => resolve({
+                    name: "Rahul",
+                    course: "Python Data Science",
+                    department: "Information Technology"
+                }), 3000);
+            }).then(data => {
+                result.innerHTML = `
+                    <h3>Data Received!</h3>
+                    <p>Name: ${data.name}</p>
+                    <p>Course: ${data.course}</p>
+                    <p>Department: ${data.department}</p>`;
+            });
+        }
+    </script>
+</body>
+</html>
