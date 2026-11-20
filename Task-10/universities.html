@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<title>Universities</title>
+<input id="country" placeholder="Country, then press Enter">
+<ul id="list"></ul>
+<script>
+  country.onkeydown = async (e) => {
+    if (e.key !== "Enter") return;
+    const res = await fetch("http://universities.hipolabs.com/search?country=" + encodeURIComponent(country.value.trim()));
+    const data = await res.json();
+    list.replaceChildren(...data.map((u) => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = a.textContent = u.web_pages[0];
+      li.append(u.name + " - ", a);
+      return li;
+    }));
+  };
+</script>
